@@ -347,14 +347,22 @@ const observer = new IntersectionObserver(entries => {
 }, {threshold:0.3});
 document.querySelectorAll('.milestone').forEach(m => observer.observe(m));
 
-/* ---------- GALLERY (replace with real <img src="..."> tags) ---------- */
+/* ---------- GALLERY ---------- */
 const gal = document.getElementById('galleryList');
-for(let i=1;i<=6;i++){
+const galleryPhotos = [
+  "IMG_20260731_144558_833.jpg",
+  "IMG_20260801_020715_640.jpg",
+  "IMG_20260801_020738_165.jpg",
+  "IMG_20260801_020754_351.jpg",
+  "IMG_20260801_021341_244.jpg",
+  "Snapchat-1965868734.jpg"
+];
+galleryPhotos.forEach((file) => {
   const p = document.createElement('div');
   p.className='polaroid';
-  p.innerHTML = `<div class="ph">📷 photo ${i}</div><div style="margin-top:8px;">add caption</div>`;
+  p.innerHTML = `<div class="ph"><img src="${file}" style="width:100%; height:100%; object-fit:cover; border-radius:4px;"></div>`;
   gal.appendChild(p);
-}
+});
 
 /* ---------- REASONS flip cards ---------- */
 const rGrid = document.getElementById('reasonsGrid');
