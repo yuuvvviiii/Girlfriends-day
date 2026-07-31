@@ -295,11 +295,11 @@ const reasons = [
 ];
 
 const secretMessages = [
-  "I think about you more than I let on.",
-  "You're my favorite notification.",
-  "I like you even on your weird days. Especially those.",
-  "You make me want to plan a future.",
-  "You're the best decision I keep making every day."
+  "Mera Din aapke baare m hi sochte hue nikal jaata haiii🤧.",
+  "You're my favorite notification😸.",
+  "Mujhe na tu bakchodi krte hue hi pasand haii 😆.",
+  "Kinder joyy kabb dila rahi haiii 😭😭",
+  "Hehe that kissi and hug was a bhery memorable moment 😽."
 ];
 
 const promises = [
@@ -370,7 +370,7 @@ let flippedCount = 0;
 reasons.forEach((r,i) => {
   const card = document.createElement('div');
   card.className='flip-card';
-  const backText = (i === reasons.length - 1) ? r : "go check the other card 👉";
+  const backText = (i === reasons.length - 1) ? r : "Jaaa dusra card dhek bee 😁";
   card.innerHTML = `<div class="flip-inner"><div class="flip-front">💜<small>tap</small></div><div class="flip-back">${backText}</div></div>`;
   card.onclick = () => {
     if(card.classList.contains('flipped')) return;
